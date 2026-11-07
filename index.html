@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
+<meta name="author" content="Abdillahi">
 <meta name="theme-color" content="#f7f1e8">
 <link rel="icon" href="data:,">
 <title>Biologie 3D</title>
@@ -75,7 +76,9 @@ p { margin: 0; }
   display: flex; align-items: center; gap: 12px;
   background: var(--paper); border-bottom: 1px solid var(--line);
 }
-#top h1 { flex: 1; font-size: 19px; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#topTitle { flex: 1; min-width: 0; }
+#top h1 { font-size: 19px; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.byline { font-size: 13px; line-height: 16px; color: var(--ash); }
 
 /* --- Sheet */
 #sheet {
@@ -250,7 +253,7 @@ button.lbl-chip:hover { background: var(--card); }
 
 <header id="top" hidden>
   <button id="homeBtn" class="quiet" aria-label="Zur Themenauswahl">Themen</button>
-  <h1 id="modTitle"></h1>
+  <div id="topTitle"><h1 id="modTitle"></h1><p class="byline">von Abdillahi</p></div>
   <button id="enBtn" class="quiet" aria-pressed="false" aria-label="Englische Hilfen">EN</button>
 </header>
 
@@ -295,6 +298,7 @@ button.lbl-chip:hover { background: var(--card); }
 <main id="home" hidden>
   <div id="homeText">
     <h1>Biologie in 3D</h1>
+    <p class="byline">von Abdillahi</p>
     <p id="homeLead">Dreh die Modelle in der Hand, tippe auf die Teile, teste dich dann selbst. Alles für den Bio-Test.</p>
     <ul id="topics"></ul>
     <p id="homeNote">Zum Üben gebaut, nicht vom Lehrer geprüft. Im Zweifel gilt dein Buch. Keine Anmeldung, keine Cookies.</p>
